@@ -2,7 +2,7 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-COPY app/requirements.txt .
+COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
@@ -10,4 +10,4 @@ COPY app/ .
 
 EXPOSE 5000
 
-CMD ["python", "app/main.py"]
+CMD ["python", "main.py"]
